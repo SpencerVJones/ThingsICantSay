@@ -1,0 +1,287 @@
+/* General Page Styles */
+h1 {
+  font-size: 4rem;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e5e5ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150vh;
+  margin: 0;
+  overflow-y: auto; 
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh; 
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.left-right-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.left-section {
+  width: 50%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.right-section {
+  width: 50%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#search-bar {
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+
+#search-bar textarea, #search-bar button {
+  height: 40px;
+  font-size: 16px;
+  width: 100%;
+}
+
+#search-bar textarea {
+  width: 500px;
+  height: 20px;
+  resize: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#search-bar button {
+  width: 520px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+/* Unsent Messages */
+.chat-container {
+  width: 320px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.header {
+  background: #f7f7f7;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.header input {
+  background: #f7f7f7;
+  width: 80%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.messages {
+  padding: 15px;
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.received {
+  background: #e5e5ea;
+  align-self: flex-start;
+}
+
+.sent {
+  background: #007aff;
+  color: white;
+  align-self: flex-end;
+}
+
+.typing {
+  width: 50px;
+  height: 20px;
+  background: #e5e5ea;
+  border-radius: 20px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing span {
+  width: 6px;
+  height: 6px;
+  background: gray;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2px;
+  animation: blink 1.5s infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.input-container {
+  padding: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 15px;
+  background: #f1f1f1;
+  margin-right: 10px;
+  outline: none;
+}
+
+.input-container button {
+  background: #007aff;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+
+/*DISPLAYING Sent MESSAGES*/
+#unsent-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Spacing between cards */
+  justify-content: center; /* Center the cards */
+}
+
+#unsent-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;  
+}
+
+/* Each iPhone-style chat screen */
+.iphone-chat {
+  width: 320px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px; /* Space between each message */
+}
+
+/* Chat Header (Recipient Name) */
+.chat-header {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #2d3748;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Message Bubble Container */
+.chat-body {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-height: 100px;
+  background: white;
+}
+
+/* Message Bubble */
+.message-box {
+  background: #007AFF; /* iPhone Blue */
+  color: white;
+  border-radius: 18px;
+  padding: 10px 15px;
+  max-width: 75%;
+  word-wrap: break-word;
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  margin-right: 15px; 
+}
+
+
+/* Footer */
+footer {
+  width: 100%;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+}

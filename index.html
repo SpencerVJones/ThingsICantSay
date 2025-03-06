@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Things I Can't Say</title> <!-- Website title -->
+
+  <link rel="stylesheet" href="css/style.css">   <!-- Link to css -->
+
+  <!-- Meta tags for SEO and social media sharing -->
+  <meta name="description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <!-- TODO: Favicon and icons for different devices -->
+  <link rel="icon" href="/favicon.ico" sizes="any">   
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+  <!-- Firebase SDK for database connectivity -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+  <!-- Linking JavaScript file, deferred to load after HTML -->
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+<div class="main-container">
+
+  <div class="left-right-container">
+
+    <div class="left-section"> <!-- Left Section: Website name, catchy phrase, and search bar -->
+
+      <!-- Website Name -->
+      <h1>Things I Can't Say</h1>
+      <!-- The catchy phrase -->
+      <h2>A space for all the stuff we are not able to really say.</h2>
+
+      <!-- Search bar for searching names -->
+      <section id="search-bar">
+        <textarea id="name-search" placeholder="Search your name"></textarea>
+        <button type="submit">Search</button>
+      </section>
+    </div> 
+
+    <!-- Right Section: Chat box interface -->
+    <div class="right-section">
+
+      <!-- Message submission form -->
+      <div class="chat-container" id="chats">
+        <div class="header">
+          <input type="text" id="chat-name" placeholder="Enter Name" required>
+        </div>
+
+        <!-- Messages display area -->
+        <div class="messages" id="messages">
+          <div class="message sent">Hey</div>
+          <div class="message received">Hey</div>
+          <div class="message sent">There is something I need to say.</div>
+          <div class="typing" id="typing">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Input area for sending messages -->
+        <div class="input-container">
+          <input type="text" id="message-input" placeholder="What do you need to say?" required>
+
+
+          <!-- Send Button -->
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+  <!-- Displaying the unsent messages  -->
+  <section id="unsent-messages">
+    <h2>Everything Unsaid</h2>
+
+    <div id="unsent-container">
+      <div id="pagination-controls"></div>
+      <!-- Messages will be dynamically inserted here -->
+    </div>
+  </section>
+
+
+  <footer>
+    <p>© 2025 Things I Can't Say</p>
+  </footer>
+
+  
+</div> 
+</body>
+</html>
